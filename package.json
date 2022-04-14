@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianoLima19/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Adriano Lima de Souza <adrianolima.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdrianoLima19/portfolio/issues"
+  },
+  "homepage": "https://github.com/AdrianoLima19/portfolio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.3",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
