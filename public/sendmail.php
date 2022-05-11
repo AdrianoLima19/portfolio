@@ -19,7 +19,7 @@ if (!$token || $token !== $_SESSION['token']) {
 $from = "contato@adriano-lima.dev.br";
 $to = "adrianolima.dev@gmail.com";
 $subject = "Mensagem enviado do Portfólio";
-$message = $post['message'] . "\n\r Enviado por {$post['name']}, email de contato {$post['email']}";
+$message = html_entity_decode($post['message']) . "\n\r Enviado por {$post['name']}, email de contato {$post['email']}";
 $headers = "From:" . $from;
 
 if (mail($to, $subject, $message, $headers) === true) {
