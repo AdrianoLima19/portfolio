@@ -17,7 +17,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/styles.min.css" />
+  <link rel="stylesheet" href="<?= __DIR__ ?>/assets/styles.min.css" />
 </head>
 
 <body>
@@ -279,7 +279,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
       </div>
     </li>
   </template>
-  <script src="./assets/script.min.js" async defer></script>
+  <script src="<?= __DIR__ ?>/assets/script.min.js" async defer></script>
 </body>
 
 </html>
