@@ -1,6 +1,16 @@
 # Portfólio
 
----
+Projeto desenvolvido com o objetivo de mostrar meus conhecimentos em desenvolvimento web listando alguns projetos pessoais que desenvolvi.
+
+## Desenvolvido utilizando
+
+    - HTML
+    - SCSS (SASS)
+    - JavaScript
+    - Webpack
+      - Autoprefixer
+      - PostCSS
+      - PurgeCSS
 
 ## Créditos
 
