@@ -391,7 +391,7 @@ function sendForm() {
   let path = window.location.pathname;
   let dataToForm = new FormData();
 
-  path = path.substring(0, path.lastIndexOf("/")) + "/sendmail.php";
+  path = path.substring(0, path.lastIndexOf("/")) + "public/sendmail.php";
 
   dataToForm.append("token", form.elements["token"].value);
   dataToForm.append("name", form.elements["name"].value);
