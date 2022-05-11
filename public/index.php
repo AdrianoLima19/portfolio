@@ -39,7 +39,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#contato" class="nav-link">Contato</a></li>
         <li>
-          <a target="_blank" href="public/assets/resources/Adriano Lima de Souza - Curriculo 2022.pdf" rel="noopener noreferrer" class="btn-outline">
+          <a target="_blank" href="public/assets/resources/Adriano Lima de Souza.pdf" rel="noopener noreferrer" class="btn-outline">
             Currículo
           </a>
         </li>
@@ -52,7 +52,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#contato" class="nav-link">Contato</a></li>
         <li>
-          <a target="_blank" href="public/assets/resources/Adriano Lima de Souza - Curriculo 2022.pdf" rel="noopener noreferrer" class="btn-outline">
+          <a target="_blank" href="public/assets/resources/Adriano Lima de Souza.pdf" rel="noopener noreferrer" class="btn-outline">
             Currículo
           </a>
         </li>
@@ -71,7 +71,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
       </div>
       <div class="cta">
         <a href="#projetos" class="btn-outline">Projetos</a>
-        <a target="_blank" href="public/assets/resources/Adriano Lima de Souza - Curriculo 2022.pdf" rel="noopener noreferrer" class="btn-outline">
+        <a target="_blank" href="public/assets/resources/Adriano Lima de Souza.pdf" rel="noopener noreferrer" class="btn-outline">
           Currículo
         </a>
       </div>
