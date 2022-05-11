@@ -81,7 +81,7 @@
 
 // function createCard(project, position) {
 //   let card = project.status ? projectCard.content.cloneNode(true) : projectCardPreview.content.cloneNode(true);
-//   let imagePrefix = "./assets/images/";
+//   let imagePrefix = "public/assets/images/";
 
 //   card.querySelector("h3").textContent = project.title;
 //   card.querySelector("p").innerHTML = project.description;
@@ -120,10 +120,10 @@
 //     for (const image of project.images) {
 //       carousel.innerHTML += `
 //     <img
-//     src="./assets/images/${image}"
+//     src="public/assets/images/${image}"
 //     alt="Imagem do projeto ${project.title}"
 //         loading="lazy"
-//         onerror="this.src='./assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';"
+//         onerror="this.src='public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';"
 //         />
 //         `;
 //     }
@@ -209,9 +209,9 @@ window.loadDialog = (element) => {
     for (const image of project.images) {
       carousel.innerHTML += [
         '<img loading="lazy"',
-        `src="./assets/images/${image}"`,
+        `src="public/assets/images/${image}"`,
         `alt="Imagem do projeto ${project.title}"`,
-        `onerror="this.src='./assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';"`,
+        `onerror="this.src='public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';"`,
         "/>",
       ].join("");
     }
@@ -221,7 +221,7 @@ window.loadDialog = (element) => {
       '<img loading="lazy"',
       `src=""`,
       `alt="Sem imagem do projeto"`,
-      `onerror="this.src='./assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';"`,
+      `onerror="this.src='public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';"`,
       "/>",
     ].join("");
   }
@@ -295,7 +295,7 @@ const projectDOM = document.querySelector("main");
 const toggleProjectBtn = projectDOM.querySelector("[data-show]");
 const ProjectInDOM = projectDOM.querySelector(".project-list");
 
-const imagePrefix = "./assets/images/";
+const imagePrefix = "public/assets/images/";
 
 const templateProjectCardItem = document.querySelector("[card-item]");
 const templateProjectCardPrev = document.querySelector("[card-preview]");

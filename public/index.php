@@ -17,7 +17,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="public/assets/styles.min.css" />
+  <link rel="stylesheet" href="<?= __DIR__ ?>/assets/styles.min.css" />
 </head>
 
 <body>
@@ -205,7 +205,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
     <button close-btn><i class="fas fa-slash"></i></button>
     <div class="lcol">
       <div class="carousel">
-        <img src="./assets/images/crop-unsplash-sxiSod0tyYQ.jpg" alt="image#1" onerror="this.src='./assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';" />
+        <img src="public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg" alt="image#1" onerror="this.src='public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';" />
       </div>
       <div class="tags">
         <span class="tag">HTML</span>
@@ -248,7 +248,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
     <li class="card">
       <div class="card-item preview">
         <div class="img-wrapper">
-          <img src="" alt="image" loading="lazy" onerror="this.src='./assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';" />
+          <img src="" alt="image" loading="lazy" onerror="this.src='public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';" />
         </div>
         <div>
           <h3>Lorem, ipsum dolor.</h3>
@@ -267,7 +267,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
     <li class="card">
       <div class="card-item">
         <div class="img-wrapper">
-          <img src="" alt="image" loading="lazy" onerror="this.src='./assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';" />
+          <img src="" alt="image" loading="lazy" onerror="this.src='public/assets/images/crop-unsplash-sxiSod0tyYQ.jpg';this.onerror='';" />
         </div>
         <h3>Lorem, ipsum dolor.</h3>
         <p>
@@ -279,7 +279,7 @@ $_SESSION['token'] = bin2hex(random_bytes(35));
       </div>
     </li>
   </template>
-  <script src="public/assets/script.min.js" async defer></script>
+  <script src="<?= __DIR__ ?>/assets/script.min.js" async defer></script>
 </body>
 
 </html>
