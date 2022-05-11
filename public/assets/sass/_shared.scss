@@ -1,0 +1,264 @@
+@use "variables" as *;
+
+@mixin btn-size {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: $fontMono;
+  color: $white-600;
+  padding: 0.25em 0.75em;
+  margin: 0 0.25em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link {
+  @include btn-size();
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 51%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    transform: translateX(-51%);
+    transition: width 0.4s ease, background-color 0.5s ease;
+  }
+
+  &:hover {
+    color: $white-400;
+
+    &::after {
+      width: 102%;
+      background: $primary-400;
+    }
+  }
+
+  &:active {
+    color: lighten($color: $primary-300, $amount: 20%);
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.3), 0 0 0.45em $primary-400;
+
+    &::after {
+      width: 102%;
+      background: $primary-300;
+      box-shadow: inset 0 0 0.5em 0 $primary-400, 0 0 0.5em 0 $primary-400;
+    }
+  }
+
+  &.current {
+    color: $white-400;
+    border-bottom: 1px solid $primary-300;
+  }
+}
+
+@mixin btn {
+  @include btn-size();
+  border-radius: 0.25em;
+  padding: 0.4em 1em;
+  margin: 0.85em 0.35em;
+  transition: background-color 0.2s ease;
+
+  &:focus-visible {
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      outline: 0.1em solid $white-400;
+      border-radius: 0;
+      outline-offset: 0.35em;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.7;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.lock {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.btn-fill {
+  @include btn();
+  background: $primary-400;
+  border: 0.2em solid $primary-400;
+
+  &:hover {
+    background: $primary-700;
+    border: 0.2em solid $primary-700;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(95, 57, 195, 0.3);
+    border: 0.2em solid $primary-900;
+  }
+
+  &:active {
+    background: $primary-900;
+    border: 0.2em solid $primary-900;
+  }
+}
+
+.btn-outline {
+  @include btn();
+  background: $bgt-400;
+  border: 0.2em solid $primary-400;
+
+  &:hover {
+    background: $primary-700;
+    border: 0.2em solid $primary-700;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(130, 87, 229, 0.3);
+    border: 0.2em solid $primary-400;
+  }
+
+  &:active {
+    border-color: $primary-400;
+    background: $primary-400;
+  }
+}
+
+.btn-neon {
+  @extend .btn-outline;
+  color: $primary-400;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.3), 0 0 0.45em $primary-400;
+  box-shadow: inset 0 0 0.5em 0 $primary-400, 0 0 0.5em 0 $primary-400;
+
+  &::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: $primary-400;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em $primary-400;
+    opacity: 0;
+    background-color: $primary-400;
+    z-index: -1;
+    transition: opacity 100ms linear;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white-600;
+    text-shadow: none;
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+a {
+  color: $white-600;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  i {
+    font-size: 1.8rem;
+    margin: 0.25rem 0.75rem;
+    transition: transform 0.3s ease, color 0.2s ease;
+  }
+
+  &:focus,
+  &:hover {
+    i {
+      transform: scale(1.4);
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    i {
+      color: $primary-300;
+    }
+  }
+
+  &:focus-visible {
+    i {
+      outline: 1px solid $white-400;
+      outline-offset: 0.2rem;
+    }
+  }
+
+  &:active {
+    i {
+      outline: none;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: $fontSans;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0.95em 0 0.65em 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-family: $fontMono;
+  font-weight: 400;
+}
+
+@mixin list {
+  font-family: $fontMono;
+  font-size: 1.1rem;
+  padding-bottom: 0.75rem;
+
+  &.less {
+    opacity: 0.8;
+  }
+}
+
+@mixin noise {
+  background: url(./images/background-tile.webp);
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+@mixin minMedia($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin maxMedia($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}

@@ -1,0 +1,42 @@
+$white-400: #fffbfe;
+$white-600: #eff1f3;
+
+$black-600: #191923;
+$black-800: #121214;
+$black-900: #0a0908;
+
+$primary-300: #9466ff;
+$primary-400: #8257e5;
+$primary-700: #734bd1;
+$primary-900: #5f39c3;
+
+$bgt-300: rgba(25, 25, 35, 0.3);
+$bgt-400: rgba(25, 25, 35, 0.4);
+$bgt-700: rgba(25, 25, 35, 0.7);
+$bgt-900: rgba(25, 25, 35, 0.9);
+
+$padding: var(--padding);
+
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+$x3l: 1920px;
+
+$fontSans: "Nunito", sans-serif;
+$fontMono: "Fira Code", monospace;
+$fontSerif: "Times New Roman", serif;
+
+:root {
+  --padding: 6rem;
+  @media screen and (max-width: $xxl) {
+    --padding: 4rem;
+  }
+  @media screen and (max-width: $lg) {
+    --padding: 2rem;
+  }
+  @media screen and (max-width: $sm) {
+    --padding: 1rem;
+  }
+}

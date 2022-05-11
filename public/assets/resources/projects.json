@@ -1,0 +1,235 @@
+[
+  {
+    "status": true,
+    "title": "Oh My Timer",
+    "description": "Desenvolvido utilizando HTML, CSS e JavaScript com <em>Date API</em>, <em>Notification API</em> e localStorage.",
+    "html_description": [
+      "<p>Este projeto foi desenvolvido com o objetivo de praticar a manipulação de tempo em JavaScript com <em>Date API</em>, design de uma aplicação simples, utilização do <em>Notification API</em> e uso do localStorage.</p>",
+      "<p>Está aplicação possui um cronômetro e temporizador com limite de 100 horas</p>"
+    ],
+    "demo": [true, "https://adriano-lima.dev.br/projetos/oh-my-timer/"],
+    "git": [true, "https://github.com/AdrianoLima19/oh-my-timer"],
+    "pkg": [false, ""],
+    "images": ["projects/omt-1651248957284.png"],
+    "credits": {
+      "FontAwesome": ["Ícones por", "https://fontawesome.com/"],
+      "Steve Johnson": [
+        "Imagem por",
+        "https://unsplash.com/@steve_j?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      ],
+      "Online Web Fonts": ["Fonte por", "https://www.onlinewebfonts.com/"]
+    },
+    "tags": {
+      "HTML": "orange",
+      "CSS": "blue",
+      "JavaScript": "yellow"
+    }
+  },
+  {
+    "status": true,
+    "title": "Landing Page #1 eligendi inventore",
+    "description": "Desenvolvido utilizando HTML, CSS e JavaScript com <em>Intersection Observer API</em>.",
+    "html_description": [
+      "<p>Este projeto foi desenvolvido seguindo um layout que construí no Figma. E neste projeto utilizei o <em>Intersection Observer API</em> para gerenciar o “timing” das animações que acontecem conforme o usuário da scroll na página.</p>"
+    ],
+    "demo": [true, "https://adriano-lima.dev.br/projetos/eligendi-inventore/"],
+    "git": [true, "https://github.com/AdrianoLima19/landing-pages/tree/page-1"],
+    "pkg": [false, ""],
+    "images": ["projects/lp-1651250736848.png"],
+    "credits": {
+      "Evie S.": [
+        "Imagem por",
+        "https://unsplash.com/@evieshaffer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      ],
+      "Zoltan Tasi": [
+        "Imagem por",
+        "https://unsplash.com/@zoltantasi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      ]
+    },
+    "tags": {
+      "HTML": "orange",
+      "CSS": "blue",
+      "JavaScript": "yellow"
+    }
+  },
+  {
+    "status": true,
+    "title": "Routing",
+    "description": "Desenvolvido com PHP e Composer",
+    "html_description": [
+      "<p>Este projeto é uma biblioteca Orientada a Objeto para o gerenciamento de rotas de uma aplicação</p>",
+      "<p class='join'>Desenvolvido para ser simples e rápido possui:</p>",
+      "<ul class='join'><li>métodos de Roteamento: GET,POST,PUT...</li><li>Roteamento Dinâmico</li><li>Restrições de Expressão Regular</li><li>Middleware</li><li>Grupo de rotas</li><li>Rota de fallback</li><li>Form Spoofing</li></ul>"
+    ],
+    "demo": [false, ""],
+    "git": [true, "https://github.com/AdrianoLima19/routing"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {
+      "PHP": "purple",
+      "PSR-4": "orange",
+      "Composer": "orange"
+    }
+  },
+  {
+    "status": true,
+    "title": "Filesystem",
+    "description": "Desenvolvido com PHP e Composer",
+    "html_description": [
+      "<p>Este projeto e uma biblioteca Orientada a Objeto para o gerenciamento de arquivos, possibilitando criar, ler, editar e deletar arquivos através do PHP</p>"
+    ],
+    "demo": [false, ""],
+    "git": [true, "https://github.com/AdrianoLima19/filesystem"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {
+      "PHP": "purple",
+      "PSR-4": "orange",
+      "Composer": "orange"
+    }
+  },
+  {
+    "status": true,
+    "title": "Portfólio",
+    "description": "Desenvolvido utilizando HTML, SCSS, JavaScript, Webpack com Autoprefixer, PostCSS e PurgeCSS.",
+    "html_description": [
+      "<p>Projeto desenvolvido com o objetivo de mostrar meus conhecimentos em desenvolvimento web listando alguns projetos pessoais que desenvolvi.</p>",
+      "<p>Neste projeto utilizei Webpack para compilação, SASS para estilização, Autoprefixer, PurgeCSS e PostCSS para compilar os estilos para CSS, adicionar Polyfill e remover classes não utilizadas do FontAwesome.</p>"
+    ],
+    "demo": [true, "https://adriano-lima.dev.br/"],
+    "git": [true, "https://github.com/AdrianoLima19/portfolio"],
+    "pkg": [false, ""],
+    "images": ["projects/prt-1651250896234.png"],
+    "credits": {
+      "FontAwesome": ["Ícones por", "https://fontawesome.com/"],
+      "Pixabay": [
+        "Imagem por",
+        "https://www.pexels.com/@pixabay?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+      ],
+      "Erik Mclean": [
+        "Imagem por",
+        "https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      ]
+    },
+    "tags": {
+      "HTML": "orange",
+      "CSS": "blue",
+      "SCSS": "pink",
+      "JavaScript": "yellow",
+      "Webpack": "blue",
+      "Autoprefixer": "red",
+      "PostCSS": "red"
+    }
+  },
+  {
+    "status": true,
+    "title": "NLW Return - Impulse",
+    "description": "Desenvolvido utilizando Vite, TypeScript, React, TailWindCSS e NodeJS.",
+    "html_description": ["<p>Um Component Widget para feedback que pode ser utilizado em qualquer site.</p>"],
+    "demo": [true, " https://nlw-return-navy.vercel.app/"],
+    "git": [true, "https://github.com/AdrianoLima19/nlw-return"],
+    "pkg": [false, ""],
+    "images": ["projects/nlw-return-20220509202952.png"],
+    "credits": {},
+    "tags": {
+      "Vite": "Orange",
+      "TypeScript": "Blue",
+      "React": "Blue",
+      "TailwindCSS": "Blue",
+      "NodeJS": "green"
+    }
+  },
+  {
+    "status": true,
+    "title": "Container",
+    "description": "Desenvolvido com PHP e Composer",
+    "html_description": [
+      "<p>Este projeto e uma biblioteca Orientada a Objeto para gerenciar estado da aplicação através do Ioc - Inversion of Control</p>"
+    ],
+    "demo": [false, ""],
+    "git": [true, "https://github.com/AdrianoLima19/container"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {
+      "PHP": "purple",
+      "PSR-4": "orange",
+      "PSR-11": "orange",
+      "Composer": "orange"
+    }
+  },
+  {
+    "status": false,
+    "title": "Minimum",
+    "description": "",
+    "html_description": [],
+    "demo": [false, ""],
+    "git": [false, "https://github.com/AdrianoLima19/minimum"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {}
+  },
+  {
+    "status": false,
+    "title": "Calendário de Eventos - Evea",
+    "description": "",
+    "html_description": [],
+    "demo": [false, ""],
+    "git": [false, "https://github.com/AdrianoLima19/Calendario-de-Eventos"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {}
+  },
+  {
+    "status": false,
+    "title": "NLW 3",
+    "description": "",
+    "html_description": [],
+    "demo": [false, ""],
+    "git": [false, "https://github.com/AdrianoLima19/nlw3"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {}
+  },
+  {
+    "status": false,
+    "title": "Landing Page #2",
+    "description": "",
+    "html_description": [],
+    "demo": [false, ""],
+    "git": [false, ""],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {}
+  },
+  {
+    "status": false,
+    "title": "Web Scrapper - 4devs",
+    "description": "",
+    "html_description": [],
+    "demo": [false, ""],
+    "git": [false, "https://github.com/AdrianoLima19/progen"],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {}
+  },
+  {
+    "status": false,
+    "title": "Velt",
+    "description": "",
+    "html_description": [],
+    "demo": [false, ""],
+    "git": [false, ""],
+    "pkg": [false, ""],
+    "images": [],
+    "credits": {},
+    "tags": {}
+  }
+]
