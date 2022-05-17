@@ -150,7 +150,7 @@
     ],
     "demo": [false, ""],
     "git": [true, "https://github.com/AdrianoLima19/container"],
-    "pkg": [false, ""],
+    "pkg": [true, "https://packagist.org/packages/artosh/container"],
     "images": [],
     "credits": {},
     "tags": {
