@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "sanitize.css": "^13.0.0",
+    "sass": "^1.77.2",
+    "vite": "^5.2.11",
+    "vite-plugin-html": "^3.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.1"
+  },
+  "scripts": {}
+}
