@@ -1,40 +1,42 @@
 import { defineConfig } from "vite";
 import path from "node:path";
 
-export default defineConfig({
-  publicDir: false,
-  base: "./",
-  root: "./src",
+export default () => {
+  return defineConfig({
+    root: path.resolve(__dirname, "src"),
+    base: "./",
 
-  server: {
-    open: "view.html",
-    port: 3000,
-  },
+    server: {
+      open: "view.html",
+      port: 3000,
+    },
 
-  build: {
-    outDir: "../public",
-    emptyOutDir: false,
-    rollupOptions: {
-      input: {
-        style: "./src/view.html",
-      },
-      output: {
-        entryFileNames: "assets/script.js",
-        chunkFileNames: "assets/js/[name].js",
-        assetFileNames: ({ name }) => {
-          const extname = path.extname(name);
+    build: {
+      outDir: "../public",
+      emptyOutDir: false,
+      manifest: true,
+      cssCodeSplit: false,
 
-          if (extname === ".css") return "assets/[name].[ext]";
+      rollupOptions: {
+        input: {
+          style: path.resolve(__dirname, "src/view.html"),
+        },
+        output: {
+          entryFileNames: "script.js",
+          chunkFileNames: "js/[name].js",
+          assetFileNames: ({ name }) => {
+            const extname = path.extname(name);
 
-          if (extname.match(/\.(png|jpe?g|gif|svg|webp)$/))
-            return "assets/images/[name].[ext]";
+            if (extname === ".css") return "[name].[ext]";
 
-          if (ext.match(/\.(woff2?|eot|ttf|otf)$/i))
-            return "assets/fonts/[name].[ext]";
+            if (extname.match(/\.(png|jpe?g|gif|svg|webp)$/)) return "assets/images/[name].[ext]";
 
-          return `assets/[name].[ext]`;
+            if (ext.match(/\.(woff2?|eot|ttf|otf)$/i)) return "assets/fonts/[name].[ext]";
+
+            return `assets/[name].[ext]`;
+          },
         },
       },
     },
-  },
-});
+  });
+};
