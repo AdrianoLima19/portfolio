@@ -1,15 +1,6 @@
-*.log
+/node_modules/
+/vendor/
+/.vite/
 
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-node_modules/
-web_modules/
-
-.npm
-.eslintcache
-.stylelintcache
 .env
-.env.local
-.vscode-test
-
-src/assets
+.env.*
