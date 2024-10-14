@@ -7,5 +7,158 @@
     <link rel="stylesheet" href="./src/style.scss" />
     <script type="module" src="./src/script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header id="start">
+      <nav class="navigation">
+        <menu>
+          <li>{{ logo }}</li>
+          <li class="mobile">
+            <button>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+          </li>
+          <div class="wrapper">
+            <li>
+              <button>Projetos</button>
+              <button>Sobre</button>
+              <button>Contato</button>
+            </li>
+          </div>
+          <li><a href="#">Currículo</a></li>
+        </menu>
+      </nav>
+      <section class="container">
+        <div class="hero">
+          <div class="info">
+            <div class="title">
+              <h1>Olá, meu nome é <strong>Adriano</strong> e sou um</h1>
+              <h2>Desenvolvedor Fullstack</h2>
+            </div>
+            <div class="cta">
+              <button>Projetos</button>
+              <button>Contato</button>
+            </div>
+          </div>
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-google" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section class="highlighted-projects" id="projects">
+      <div class="section-title">
+        <h1>Projetos</h1>
+        <h2>em destaque</h2>
+      </div>
+      <ul id="highlighted-projects-list">
+        <!-- Projects will be dynamically populated here -->
+      </ul>
+    </section>
+    <section class="other-projects" id="other-projects">
+      <div class="section-title">
+        <h1>Outros Projetos</h1>
+      </div>
+      <ul id="offset-projects-list">
+        <!-- Projects will be dynamically populated here -->
+      </ul>
+      <button>mostrar mais projetos</button>
+    </section>
+    <main class="about" id="about">
+      <div class="section-title">
+        <h1>Sobre Mim</h1>
+      </div>
+      <p>
+        Olá, meu nome é Adriano e sou um desenvolvedor web. Trabalhei em uma empresa com múltiplos projetos, realizando
+        manutenção, implementação e migração de funcionalidades para a versão 7.4 do PHP, também realizei implementações
+        de interfaces frontend com, CSS, JQuery e o framework VueJS. Atualmente estou estudando e desenvolvendo alguns
+        projetos pessoais, um deles é um framework fullstack chamado 'Note', que está em fase inicial e tem sido uma
+        grande experiência planejar e projetar todos os módulos e funcionalidades.
+      </p>
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <div class="block">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>SASS</li>
+          <li>UI/UX</li>
+          <li>TailwindCSS</li>
+        </div>
+        <div class="block">
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>MVC</li>
+          <li>Rest API</li>
+          <li>PHP Standards Recommendations</li>
+          <li>Programação Orientada a Objetos</li>
+        </div>
+        <div class="block">
+          <li>Git</li>
+          <li>Github</li>
+          <li>NPM</li>
+          <li>Composer</li>
+          <li>Apache</li>
+          <li>ViteJS</li>
+        </div>
+      </ul>
+    </main>
+    <section class="contact" id="contact">
+      <div class="section-title">
+        <h1>Contato</h1>
+        <h2>disponível para trabalho remoto ou presencial.</h2>
+      </div>
+      <form method="post">
+        <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
+        <div class="group">
+          <input type="text" name="name" id="name" required autocomplete="name" placeholder="" />
+          <label>Nome</label>
+          <div class="highlight"></div>
+        </div>
+        <div class="group">
+          <input type="email" name="email" id="email" required autocomplete="email" placeholder="" />
+          <label>Email</label>
+          <div class="highlight"></div>
+        </div>
+        <div class="textarea">
+          <textarea name="message" id="message" required placeholder="Deixe a sua mensagem"></textarea>
+        </div>
+        <button class="btn-fill" type="submit">enviar</button>
+        <span class="link">ou entre em contato pelo email <a href="mailto:{{ email }}">{{ email }}</a></span>
+      </form>
+    </section>
+    <footer>
+      <div>
+        <h1>{{ logo }}</h1>
+        <h2>&copy; 2024. Todos os direitos reservados.</h2>
+      </div>
+    </footer>
+    <div id="toast">
+      <h4></h4>
+      <p></p>
+      <button>x</button>
+    </div>
+  </body>
 </html>
