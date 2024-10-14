@@ -1,0 +1,9 @@
+@import url(sanitize.css/assets.css);
+@import url(sanitize.css/reduce-motion.css);
+@import url(sanitize.css/typography.css);
+@import url(sanitize.css/system-ui.css);
+@import url(sanitize.css/ui-monospace.css);
+@import url(sanitize.css/forms.css);
+@import url(sanitize.css/sanitize.css);
+
+@import url(../../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
