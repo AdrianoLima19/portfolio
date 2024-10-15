@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import path from "node:path";
 
+import loadSVG from "./src/js/plugins/svg";
+
 export default defineConfig({
   root: "./",
   base: "./",
@@ -43,4 +45,11 @@ export default defineConfig({
       },
     },
   },
+  plugins: [
+    {
+      name: "replace-logo-placeholder-with-svg",
+      enforce: "post",
+      transformIndexHtml: (html) => loadSVG(html),
+    },
+  ],
 });
