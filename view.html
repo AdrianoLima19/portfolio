@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adriano Lima de Souza - Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/style.scss" />
     <script type="module" src="./src/script.js"></script>
   </head>
@@ -20,13 +26,13 @@
             </button>
           </li>
           <div class="wrapper">
-            <li>
-              <button>Projetos</button>
-              <button>Sobre</button>
-              <button>Contato</button>
-            </li>
+            <li><button class="btn-link">Projetos</button></li>
+            <li><button class="btn-link">Sobre</button></li>
+            <li><button class="btn-link">Contato</button></li>
           </div>
-          <li><a href="#">Currículo</a></li>
+          <li>
+            <a href="{{ curriculo }}" target="_blank" rel="noopener noreferrer" class="btn-outline">Currículo</a>
+          </li>
         </menu>
       </nav>
       <section class="container">
@@ -37,29 +43,54 @@
               <h2>Desenvolvedor Fullstack</h2>
             </div>
             <div class="cta">
-              <button>Projetos</button>
-              <button>Contato</button>
+              <button class="btn-outline">Projetos</button>
+              <button class="btn-fill">Contato</button>
             </div>
           </div>
           <div class="socials">
             <ul>
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="i-link"
+                  href="{{ github }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  aria-describedby="tooltip-github"
+                >
+                  <span class="popup md-right" id="tooltip-github">GitHub</span>
                   <i class="fa-brands fa-github" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="i-link"
+                  href="{{ whatsapp }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  aria-describedby="tooltip-whatsapp"
+                >
+                  <span class="popup md-right" id="tooltip-whatsapp">WhatsApp</span>
                   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="i-link"
+                  href="{{ linkedin }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  aria-describedby="tooltip-linkedin"
+                >
+                  <span class="popup md-right" id="tooltip-linkedin">LinkedIn</span>
                   <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a class="i-link" href="mailto:{{ email }}" aria-label="Email" aria-describedby="tooltip-email">
+                  <span class="popup md-right" id="tooltip-email">Email</span>
                   <i class="fa-brands fa-google" aria-hidden="true"></i>
                 </a>
               </li>
@@ -91,37 +122,37 @@
         <h1>Sobre Mim</h1>
       </div>
       <p>
-        Olá, meu nome é Adriano e sou um desenvolvedor web. Trabalhei em uma empresa com múltiplos projetos, realizando
-        manutenção, implementação e migração de funcionalidades para a versão 7.4 do PHP, também realizei implementações
-        de interfaces frontend com, CSS, JQuery e o framework VueJS. Atualmente estou estudando e desenvolvendo alguns
-        projetos pessoais, um deles é um framework fullstack chamado 'Note', que está em fase inicial e tem sido uma
-        grande experiência planejar e projetar todos os módulos e funcionalidades.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, laudantium architecto, delectus aperiam
+        mollitia odit expedita quis amet consectetur reiciendis modi! Qui vel maiores dignissimos labore est. Ex animi
+        atque voluptas magni voluptatum sint a aliquid, obcaecati repellendus quidem numquam non nobis expedita porro
+        fuga quo, optio exercitationem labore laborum consequuntur ea placeat. Ipsa adipisci nisi doloremque
+        consectetur! Ad mollitia amet illum, cumque tempore cum!
       </p>
       <h2>Habilidades</h2>
       <ul class="skills">
         <div class="block">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>SASS</li>
-          <li>UI/UX</li>
-          <li>TailwindCSS</li>
+          <li>officiis</li>
+          <li>nesciunt</li>
+          <li>Quod</li>
+          <li>nesciunt</li>
+          <li>corporis</li>
+          <li>accusamus</li>
         </div>
         <div class="block">
-          <li>PHP</li>
-          <li>MySQL</li>
-          <li>MVC</li>
-          <li>Rest API</li>
-          <li>PHP Standards Recommendations</li>
-          <li>Programação Orientada a Objetos</li>
+          <li>aspernatur</li>
+          <li>amet</li>
+          <li>elit</li>
+          <li>Facilis</li>
+          <li>Minima voluptatibus</li>
+          <li>laudantium recusandae</li>
         </div>
         <div class="block">
-          <li>Git</li>
-          <li>Github</li>
-          <li>NPM</li>
-          <li>Composer</li>
-          <li>Apache</li>
-          <li>ViteJS</li>
+          <li>mollitia</li>
+          <li>aliquid</li>
+          <li>dignissimos</li>
+          <li>magnam</li>
+          <li>possimus</li>
+          <li>consequuntur</li>
         </div>
       </ul>
     </main>
