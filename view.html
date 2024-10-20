@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adriano Lima de Souza - Portfólio</title>
+    <script type="module" src="src/script.js"></script>
+    <link rel="stylesheet" href="src/styles.scss" />
+  </head>
+  <body>
+    <header class="header-section" id="Inicio">
+      <nav class="header-navigation">
+        <menu>
+          <li><span>LOGO</span></li>
+          <li class="mobile">
+            <button
+              class="mobile-btn"
+              id="mobile-btn"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+              aria-label="Abrir menu"
+            >
+              ☰ Menu
+            </button>
+          </li>
+          <div class="centralize">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Mais Projetos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </div>
+          <li><a href="#">Currículo</a></li>
+        </menu>
+      </nav>
+      <section class="container">
+        <div class="hero">
+          <div class="heading">
+            <h1>Olá, meu nome é <strong>Adriano</strong> e sou um</h1>
+            <h2>Desenvolvedor Web Fullstack</h2>
+          </div>
+          <div class="cta">
+            <a href="#">Projetos</a>
+            <a href="#">Contato</a>
+          </div>
+        </div>
+        <div class="socials">
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <div id="mobile-backdrop" class="mobile-backdrop" role="presentation" aria-hidden="true"></div>
+    <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <button id="close-mobile" aria-label="Fechar menu">✕ Fechar</button>
+      <menu>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Mais Projetos</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Currículo</a></li>
+      </menu>
+    </nav>
+    <section class="highlight-projects-section" id="Projetos">
+      <div class="section-title">
+        <h1>Projetos</h1>
+        <h2>em destaque</h2>
+      </div>
+      <ul id="highlight-projects-list">
+        <!-- Projetos carregados dinamicamente com ViteJS -->
+      </ul>
+    </section>
+    <section class="more-projects-section" id="Mais-Projetos">
+      <div class="section-title">
+        <h1>Mais Projetos</h1>
+      </div>
+      <ul id="more-projects-list">
+        <!-- Projetos carregados dinamicamente com ViteJS -->
+      </ul>
+      <button>mostrar mais</button>
+    </section>
+    <main class="about-section" id="Sobre-Mim">
+      <div class="section-title">
+        <h1>Sobre Mim</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, laudantium architecto, delectus aperiam
+          mollitia odit expedita quis amet consectetur reiciendis modi! Qui vel maiores dignissimos labore est. Ex animi
+          atque voluptas magni voluptatum sint a aliquid, obcaecati repellendus quidem numquam non nobis expedita porro
+          fuga quo, optio exercitationem labore laborum consequuntur ea placeat. Ipsa adipisci nisi doloremque
+          consectetur! Ad mollitia amet illum, cumque tempore cum!
+        </p>
+        <h2>Habilidades</h2>
+        <ul class="skills-list">
+          <div class="block">
+            <li>Skill Set 1</li>
+            <li>Skill Set 2</li>
+            <li>Skill Set 3</li>
+            <li>Skill Set 4</li>
+            <li>Skill Set 5</li>
+            <li>Skill Set 6</li>
+          </div>
+          <div class="block">
+            <li>Skill Set 1</li>
+            <li>Skill Set 2</li>
+            <li>Skill Set 3</li>
+            <li>Skill Set 4</li>
+            <li>Skill Set 5</li>
+            <li>Skill Set 6</li>
+          </div>
+          <div class="block">
+            <li>Skill Set 1</li>
+            <li>Skill Set 2</li>
+            <li>Skill Set 3</li>
+            <li>Skill Set 4</li>
+            <li>Skill Set 5</li>
+            <li>Skill Set 6</li>
+          </div>
+        </ul>
+      </div>
+    </main>
+    <section class="contact-section" id="Contato">
+      <div class="section-title">
+        <h1>Contato</h1>
+        <h2>disponível para trabalho remoto ou presencial</h2>
+      </div>
+      <form method="post">
+        <input type="hidden" name="token" value="token" />
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" required autocomplete="name" placeholder="" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required autocomplete="email" placeholder="" />
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" required placeholder="Deixe a sua mensagem..."></textarea>
+        </div>
+        <button type="submit">enviar</button>
+        <span>ou entre em contato pelo email <a href="#">email@gmail.com</a></span>
+      </form>
+    </section>
+    <footer class="footer-section">
+      <div>
+        <span>LOGO</span>
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
