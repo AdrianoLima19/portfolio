@@ -1,191 +1,365 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio de Adriano Lima de Souza - Desenvolvedor Fullstack" />
     <title>Adriano Lima de Souza - Portfólio</title>
     <link rel="stylesheet" href="style.scss" />
     <script type="module" src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <header id="page-header" class="header-section">
-      <nav>
-        <menu>
-          <li>{{logo}}</li>
-          <div class="links">
-            <li>
-              <a href="#page-projects">Projetos</a>
-            </li>
-            <li>
-              <a href="#page-about">Sobre</a>
-            </li>
-            <li>
-              <a href="#page-contact">Contato</a>
-            </li>
-          </div>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn-outline">Currículo</a>
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li class="nav-logo">
+            <a href="#page-header" aria-label="Voltar ao topo"> {{logo}} </a>
           </li>
-        </menu>
+
+          <ul class="nav-cta-list">
+            <li><a href="#page-showcase" class="nav-cta-link">Projetos</a></li>
+            <li><a href="#page-about" class="nav-cta-link">Sobre</a></li>
+            <li><a href="#page-contact" class="nav-cta-link">Contato</a></li>
+          </ul>
+
+          <li class="nav-link">
+            <a href="#" target="_blank" rel="noopener noreferrer">Currículo</a>
+          </li>
+
+          <button
+            class="nav-mobile-toggle"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
+          </button>
+        </ul>
       </nav>
-      <section class="container">
-        <div class="hero">
-          <div class="title">
-            <h1>Olá, meu nome é <strong>Adriano</strong> e sou um</h1>
-            <h2>Desenvolvedor Fullstack</h2>
+
+      <nav id="mobile-menu" class="nav-mobile" aria-label="Menu mobile" hidden>
+        <ul class="nav-mobile-list">
+          <li><a href="#page-showcase" class="nav-mobile-link">Projetos</a></li>
+          <li><a href="#page-about" class="nav-mobile-link">Sobre</a></li>
+          <li><a href="#page-contact" class="nav-mobile-link">Contato</a></li>
+          <li><a href="#" class="nav-mobile-link">Currículo</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero-container" aria-labelledby="hero-title">
+        <div class="hero-title">
+          Olá, meu nome é <strong>Adriano</strong> e sou um
+          <span class="hero-subtitle">Desenvolvedor Fullstack</span>
+        </div>
+
+        <div class="hero-cta">
+          <a class="cta-link" href="#page-showcase">Projetos</a>
+          <a class="cta-link" href="#page-contact">Contato</a>
+        </div>
+
+        <ul class="hero-socials" aria-label="Redes sociais">
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visite meu perfil no GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato via WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Conecte-se comigo no LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:email@email.com" aria-label="Envie um email">
+              <i class="fa-brands fa-google" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <main id="main-content">
+      <section id="page-showcase" class="showcase-section" aria-labelledby="showcase-title">
+        <div class="section-title">
+          <h2 id="showcase-title">
+            Projetos
+            <span class="section-subtitle">em destaque</span>
+          </h2>
+        </div>
+
+        <ul class="showcases-list">
+          <li class="showcase">
+            <div class="showcase-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do Projeto em Destaque 1" loading="lazy" />
+            </div>
+            <div class="showcase-content">
+              <h3 class="showcase-title">Título do Projeto em Destaque 1</h3>
+              <p class="showcase-description">Descrição do Projeto 1</p>
+              <p class="showcase-meta">Tech Stack usada no <span>Projeto</span> 1</p>
+              <div class="showcase-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Prévia</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="showcase">
+            <div class="showcase-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do Projeto em Destaque 2" loading="lazy" />
+            </div>
+            <div class="showcase-content">
+              <h3 class="showcase-title">Título do Projeto em Destaque 2</h3>
+              <p class="showcase-description">Descrição do Projeto 2</p>
+              <p class="showcase-meta">Tech Stack usada no <span>Projeto</span> 2</p>
+              <div class="showcase-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Prévia</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="showcase">
+            <div class="showcase-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do Projeto em Destaque 3" loading="lazy" />
+            </div>
+            <div class="showcase-content">
+              <h3 class="showcase-title">Título do Projeto em Destaque 3</h3>
+              <p class="showcase-description">Descrição do Projeto 3</p>
+              <p class="showcase-meta">Tech Stack usada no <span>Projeto</span> 3</p>
+              <div class="showcase-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">Prévia</a>
+                <a href="#" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="projects-section" aria-labelledby="projects-title">
+        <div class="section-title">
+          <h2 id="projects-title">Outros Projetos</h2>
+        </div>
+
+        <ul class="projects-list">
+          <li class="card">
+            <div class="card-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do projeto" loading="lazy" />
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Ver código no GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h3 class="card-title">Título do Card</h3>
+            <p class="card-meta">Tech Stack do <span>Card</span></p>
+            <p class="card-description">Descrição do Card</p>
+          </li>
+
+          <li class="card">
+            <div class="card-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do projeto" loading="lazy" />
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Ver código no GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h3 class="card-title">Título do Card</h3>
+            <p class="card-meta">Tech Stack do <span>Card</span></p>
+            <p class="card-description">Descrição do Card</p>
+          </li>
+
+          <li class="card">
+            <div class="card-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do projeto" loading="lazy" />
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Ver código no GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h3 class="card-title">Título do Card</h3>
+            <p class="card-meta">Tech Stack do <span>Card</span></p>
+            <p class="card-description">Descrição do Card</p>
+          </li>
+
+          <li class="card">
+            <div class="card-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do projeto" loading="lazy" />
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Ver código no GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h3 class="card-title">Título do Card</h3>
+            <p class="card-meta">Tech Stack do <span>Card</span></p>
+            <p class="card-description">Descrição do Card</p>
+          </li>
+
+          <li class="card">
+            <div class="card-media">
+              <img src="assets/images/default.webp" alt="Captura de tela do projeto" loading="lazy" />
+            </div>
+            <div class="card-links">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Ver código no GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+            <h3 class="card-title">Título do Card</h3>
+            <p class="card-meta">Tech Stack do <span>Card</span></p>
+            <p class="card-description">Descrição do Card</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="page-about" class="about-section" aria-labelledby="about-title">
+        <div class="section-title">
+          <h2 id="about-title">Sobre Mim</h2>
+        </div>
+
+        <div class="about-content">
+          <p class="about-text">Primeiro parágrafo com introdução...</p>
+          <p class="about-text">Segundo parágrafo com mais detalhes...</p>
+        </div>
+
+        <div class="about-skills">
+          <div class="skills-group">
+            <h3 class="skills-group-title">Ferramentas & Tecnologias</h3>
+            <ul class="skills-group-list">
+              <li>Habilidade 1</li>
+              <li>Habilidade 2</li>
+              <li>Habilidade 3</li>
+              <li>Habilidade 4</li>
+              <li>Habilidade 5</li>
+            </ul>
           </div>
-          <div class="cta">
-            <a href="#page-projects" class="btn-outline">Projetos</a>
-            <a href="#page-contact" class="btn-fill">Contato</a>
+
+          <div class="skills-group">
+            <h3 class="skills-group-title">Competências</h3>
+            <ul class="skills-group-list">
+              <li>Habilidade 1</li>
+              <li>Habilidade 2</li>
+              <li>Habilidade 3</li>
+              <li>Habilidade 4</li>
+              <li>Habilidade 5</li>
+            </ul>
           </div>
-          <div class="socials">
-            <ul>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="tooltip" aria-label="GitHub">ico</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="tooltip" aria-label="WhatsApp">ico</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="tooltip" aria-label="LinkedIn">ico</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="tooltip" aria-label="E-mail">ico</a>
-              </li>
+
+          <div class="skills-group">
+            <h3 class="skills-group-title">Soft Skills</h3>
+            <ul class="skills-group-list">
+              <li>Habilidade 1</li>
+              <li>Habilidade 2</li>
+              <li>Habilidade 3</li>
+              <li>Habilidade 4</li>
+              <li>Habilidade 5</li>
             </ul>
           </div>
         </div>
       </section>
-    </header>
-    <section id="page-projects" class="highlighted-projects-section">
-      <div class="section-title">
-        <h1>Projetos</h1>
-        <h2>em destaque</h2>
-      </div>
-      <ul>
-        <li class="card"></li>
-        <li class="card"></li>
-        <li class="card"></li>
-      </ul>
-    </section>
-    <section class="other-projects-section">
-      <div class="section-title">
-        <h1>Outros Projetos</h1>
-      </div>
-      <ul>
-        <li class="card"></li>
-        <li class="card"></li>
-        <li class="card"></li>
-      </ul>
-    </section>
-    <main id="page-about" class="about-section">
-      <div class="section-title">
-        <h1>Sobre Mim</h1>
-      </div>
-      <!-- <p>
-        Olá, meu nome é Adriano e sou um desenvolvedor web. Trabalhei em uma empresa com múltiplos projetos, realizando
-        manutenção, implementação e migração de funcionalidades para a versão 7.4 do PHP, também realizei implementações
-        de interfaces frontend com, CSS, JQuery e o framework VueJS. Atualmente estou estudando e desenvolvendo alguns
-        projetos pessoais, um deles é um framework fullstack chamado 'Note', que está em fase inicial e tem sido uma
-        grande experiência planejar e projetar todos os módulos e funcionalidades.
-      </p>
-      <p>
-        Olá! Sou o Adriano, desenvolvedor web fullstack com experiência em projetos reais, atuando tanto no desenvolvimento de interfaces quanto no desenvolvimento e manutenção de sistemas backend. Durante minha passagem pela S. Baum Tecnologia, realizei implementação, manutenção e atualização do backend, incluindo atualizar o sistema para versões mais modernas, além de trabalhar diretamente no frontend, utilizando tanto frameworks quanto tecnologias tradicionais.
-        Atualmente, estou me aprofundando no ecossistema Laravel, estou criando um sistema ERP e, em paralelo, criando uma API RESTful com autenticação JWT para um eCommerce. Além do projeto Note — um framework fullstack que estou desenvolvendo do zero —.
-      </p>
-      <p>
-        Olá! Sou o Adriano, desenvolvedor web fullstack, proativo, curioso e apaixonado por tecnologia. Tenho experiência em projetos reais, atuando no tanto no desenvolvimento de interfaces quanto no desenvolvimento e manutenção de sistemas backend. Durante minha passagem pela S. Baum Tecnologia, realizei implementação, manutenção e atualização do backend, incluindo atualizar o sistema para versões mais modernas, além de trabalhar diretamente no frontend, utilizando tanto frameworks quanto tecnologias tradicionais.
-        Atualmente, estou me aprofundando no ecossistema Laravel, estou criando um sistema ERP e, em paralelo, criando uma API RESTful com autenticação JWT para um eCommerce. Além do projeto Note — um framework fullstack que estou desenvolvendo do zero —.
-      </p> -->
-      <p>
-        Olá! Sou o Adriano, desenvolvedor web fullstack, proativo, curioso e apaixonado por tecnologia. Tenho
-        experiência em projetos reais, atuando tanto no desenvolvimento de interfaces quanto na criação e manutenção de
-        sistemas backend.
-      </p>
-      <p>
-        Durante minha passagem pela S. Baum Tecnologia, trabalhei com a implementação, manutenção e atualização do
-        backend, incluindo a modernização do sistema para versões mais recentes. Também atuei no frontend, utilizando
-        tanto frameworks modernos quanto tecnologias tradicionais.
-      </p>
-      <p>
-        Atualmente, estou me aprofundando no ecossistema Laravel. Estou desenvolvendo um sistema ERP completo, além de
-        uma API RESTful com autenticação JWT para um projeto de eCommerce. Paralelamente, sigo trabalhando no Note, um
-        framework fullstack autoral que estou desenvolvendo do zero — uma experiência que tem sido desafiadora e
-        enriquecedora em vários níveis.
-      </p>
-      <h2>Habilidades</h2>
-      <ul>
-        <div>
-          <h3>Ferramentas e Softwares</h3>
-          <li>VS Code</li>
-          <li>Figma</li>
-          <li>Git</li>
-          <li>GitHub</li>
-          <!-- <li>Apache</li>
-          <li>Nginx</li> -->
-          <li>NPM</li>
-          <li>Composer</li>
+
+      <section id="page-contact" class="contact-section" aria-labelledby="contact-title">
+        <div class="section-title">
+          <h2 id="contact-title">
+            Contato
+            <span class="section-subtitle">disponível para trabalho remoto ou presencial</span>
+          </h2>
         </div>
-        <div>
-          <h3>Hard Skills</h3>
-          <li>Desenvolvimento Web Fullstack</li>
-          <li>Design e Arquitetura de Sistemas (MVC)</li>
-          <li>APIs RESTful</li>
-          <li>Programação Orientada a Objetos (POO)</li>
-          <li>Padrões PSR (PHP Standards Recommendations)</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>SASS</li>
-          <li>TailwindCSS</li>
-          <li>UI/UX</li>
-          <li>Vue.js</li>
-          <li>PHP</li>
-          <li>Node.js</li>
-          <li>MySQL</li>
-        </div>
-        <div>
-          <h3>Soft Skills</h3>
-          <li>Adaptabilidade</li>
-          <li>Colaboração</li>
-          <li>Curiosidade</li>
-          <li>Resolução de problemas</li>
-        </div>
-        <div>
-          <h3>Em Estudo</h3>
-          <li>Testes automatizados</li>
-          <li>Laravel avançado</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Design Patterns</li>
-          <li>Clean Architecture</li>
-        </div>
-      </ul>
+
+        <form action="#" class="contact-form" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-group-label">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              autocomplete="name"
+              class="form-group-input"
+              aria-required="true"
+            />
+            <div class="form-group-highlight"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-group-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+              class="form-group-input"
+              aria-required="true"
+            />
+            <div class="form-group-highlight"></div>
+          </div>
+
+          <div class="textarea-group">
+            <label for="message" class="form-group-label">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              class="form-group-textarea"
+              placeholder="Deixe a sua mensagem..."
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <button class="btn-fill" type="submit">Enviar</button>
+          <p class="contact-alternative">
+            ou entre em contato através do email
+            <a href="mailto:email@email.com">email@email.com</a>
+          </p>
+        </form>
+      </section>
     </main>
-    <section id="page-contact" class="contact-section">
-      <div class="section-title">
-        <h1>Contato</h1>
-        <h2>disponível para trabalho remoto ou presencial</h2>
-      </div>
-      <form method="post">
-        <input type="hidden" name="token" value="token" />
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" required autocomplete="name" placeholder="" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" required autocomplete="email" placeholder="" />
-        </div>
-        <div class="form-group">
-          <textarea name="message" id="message" required placeholder="Deixe a sua mensagem..."></textarea>
-        </div>
-        <button class="btn-fill" type="submit">enviar</button>
-        <span>ou entre em contato pelo email <a href="mailto:">email@email.com</a></span>
-      </form>
-    </section>
+
     <footer class="footer-section">
-      <p>&copy; Adriano 2025</p>
+      <div class="footer-grid">
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <h3 class="nav-title">Navegação</h3>
+          <ul class="nav-list">
+            <li><a href="#page-about">Sobre</a></li>
+            <li><a href="#page-showcase">Projetos</a></li>
+            <li><a href="#page-contact">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-social">
+          <h3 class="footer-title">Conecte-se</h3>
+          <ul class="social-list">
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li>
+              <a href="mailto:email@email.com">Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <hr />
+        <p class="footer-text">Desenvolvido por <span class="footer-name">Adriano</span> © 2026</p>
+      </div>
     </footer>
   </body>
 </html>
