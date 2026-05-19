@@ -1,0 +1,16 @@
+{
+  "name": "portfolio/pessoal",
+  "description": "Portfólio pessoal",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "app/helpers/functions.php"
+    ]
+  },
+  "require": {
+    "php": "^8.0"
+  }
+}
