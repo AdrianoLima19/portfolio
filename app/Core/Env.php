@@ -2,10 +2,18 @@
 
 namespace App\Core;
 
+use RuntimeException;
+
 class Env
 {
     private static bool $loaded = false;
 
+    /**
+     * @param string $path
+     *
+     * @return void
+     * @throws RuntimeException
+     */
     public static function load(string $path): void
     {
         if (self::$loaded) {
@@ -13,7 +21,7 @@ class Env
         }
 
         if (!file_exists($path)) {
-            throw new \RuntimeException("Arquivo .env não encontrado em: {$path}");
+            throw new RuntimeException("Arquivo .env não encontrado em: {$path}");
         }
 
         $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -37,11 +45,22 @@ class Env
         self::$loaded = true;
     }
 
+    /**
+     * @param string $key
+     * @param mixed  $default
+     *
+     * @return mixed
+     */
     public static function get(string $key, mixed $default = null): mixed
     {
         return $_ENV[$key] ?? $default;
     }
 
+    /**
+     * @param string $value
+     *
+     * @return string
+     */
     private static function stripQuotes(string $value): string
     {
         if (
@@ -54,6 +73,11 @@ class Env
         return $value;
     }
 
+    /**
+     * @param string $value
+     *
+     * @return mixed
+     */
     private static function parseValue(string $value): mixed
     {
         $lower = strtolower($value);
@@ -67,6 +91,11 @@ class Env
         };
     }
 
+    /**
+     * @param string $value
+     *
+     * @return float|int|string
+     */
     private static function parseNumeric(string $value): mixed
     {
         if (filter_var($value, FILTER_VALIDATE_INT) !== false) {
