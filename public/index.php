@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\FormController;
 use App\Controllers\HomeController;
 use App\Controllers\ProjectsController;
 use App\Core\Env;
@@ -41,7 +42,7 @@ try {
             break;
 
         case 'POST:/api/submit':
-            # code...
+            (new FormController)->submit();
             break;
 
         default:
