@@ -21,17 +21,12 @@ export default defineConfig(({ mode }) => {
       {
         name: "php-hot-reload",
 
-        configureServer(server) {
-          server.watcher.add("resources/**/*.php");
-
-          server.watcher.on("change", (file) => {
-            if (file.endsWith(".php")) {
-              server.ws.send({
-                type: "full-reload",
-                path: "*",
-              });
-            }
-          });
+        handleHotUpdate({ file, server }) {
+          if (file.includes("/resources/") && file.endsWith(".php")) {
+            server.ws.send({
+              type: "full-reload",
+            });
+          }
         },
       },
     ],
