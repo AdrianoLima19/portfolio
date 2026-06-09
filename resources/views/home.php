@@ -388,7 +388,66 @@
   </main>
 
   <footer class="footer-section">
-    <p aria-label="Desenvolvido por Adriano, 2026">Desenvolvido por <span>Adriano</span> © 2026</p>
+    <div class="container">
+      <div class="upper">
+        <div class="group">
+          <div class="logo">
+            <?= $logo ?>
+          </div>
+
+          <ul class="group-list">
+            <li>
+              <a
+                class="tooltip"
+                href="<?= linkTo('github') ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Meu perfil no GitHub">
+                <i class="fa-brands fa-github " aria-hidden="true"></i>
+                <span class="tooltip-text bottom" aria-hidden="true">Github</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="tooltip grow"
+                href="<?= linkTo('whatsapp') ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Entre em contato via WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <span class="tooltip-text bottom" aria-hidden="true">WhatsApp</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="tooltip grow"
+                href="<?= linkTo('linkedin') ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Entre em contato no LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                <span class="tooltip-text bottom" aria-hidden="true">LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="nav-group" aria-label="Navegação do rodapé">
+          <ul class="nav-list" role="list">
+            <li><a href="#header">Início</a></li>
+            <li><a href="#showcase">Destaques</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lower">
+        <hr />
+
+        <p aria-label="Desenvolvido por Adriano, 2026">Desenvolvido por <span>Adriano</span> © 2026</p>
+      </div>
+    </div>
   </footer>
 </body>
 
