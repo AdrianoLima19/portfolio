@@ -75,3 +75,8 @@ function debug(mixed ...$var): void
     var_dump($var);
     echo "</pre>";
 }
+
+function linkTo(string $link, string $default = '')
+{
+    return env("LINK_$link", $default);
+}
