@@ -75,45 +75,46 @@
           <li class="socials-link">
             <a
               class="tooltip grow"
-              href=""
+              href="<?= linkTo('github') ?>"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visite meu perfil no GitHub">
               <i class="fa-brands fa-github " aria-hidden="true"></i>
-              <span class="tooltip-text bottom md-right" aria-hidden="true">Github</span>
+              <span class="tooltip-text bottom xl:right" aria-hidden="true">Github</span>
             </a>
           </li>
 
           <li class="socials-link">
             <a
               class="tooltip grow"
-              href="" target="_blank"
+              href="<?= linkTo('whatsapp') ?>"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Entre em contato via WhatsApp">
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-              <span class="tooltip-text bottom md-right" aria-hidden="true">WhatsApp</span>
+              <span class="tooltip-text bottom xl:right" aria-hidden="true">WhatsApp</span>
             </a>
           </li>
 
           <li class="socials-link">
             <a
               class="tooltip grow"
-              href=""
+              href="<?= linkTo('linkedin') ?>"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Conecte-se comigo no LinkedIn">
               <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-              <span class="tooltip-text bottom md-right" aria-hidden="true">LinkedIn</span>
+              <span class="tooltip-text bottom xl:right" aria-hidden="true">LinkedIn</span>
             </a>
           </li>
 
           <li class="socials-link">
             <a
               class="tooltip grow"
-              href="mailto:"
+              href="mailto:<?= linkTo('email') ?>"
               aria-label="Envie um email">
               <i class="fa-brands fa-google" aria-hidden="true"></i>
-              <span class="tooltip-text bottom md-right" aria-hidden="true">Email</span>
+              <span class="tooltip-text bottom xl:right" aria-hidden="true">Email</span>
             </a>
           </li>
         </ul>
@@ -128,122 +129,142 @@
       </div>
 
       <ul class="showcase-list" role="list">
-        <li class="card">
-          <div class="media">
-            <img
-              src=""
-              alt="Imagem do projeto"
-              loading="lazy"
-              class="hover" />
-          </div>
-
-          <div class="content">
-            <h3 class="title">Título do Projeto</h3>
-
-            <p class="meta-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </p>
-
-            <p class="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint omnis veniam, qui iusto rerum culpa illo nisi quam. Minima provident labore blanditiis quam.
-            </p>
-
-            <div class="links" role="group" aria-label="Links do projeto">
-              <a
-                class="btn-outline"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer">
-                Projeto
-                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-              </a>
-
-              <a
-                class="btn-fill"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer">
-                Código
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-              </a>
-
-              <a
-                class="btn-outline"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer">
-                Packagist
-                <i class="fa-solid fa-box-open" aria-hidden="true"></i>
-              </a>
+        <?php foreach (array_slice($projects, 0, 3) as $project): ?>
+          <li class="card">
+            <div class="media">
+              <img
+                src="<?= $project['image'] ?>"
+                alt="Imagem do projeto <?= $project['title'] ?>"
+                loading="lazy"
+                class="hover" />
             </div>
-          </div>
-        </li>
+
+            <div class="content">
+              <h3 class="title">
+                <?= $project['title'] ?>
+              </h3>
+
+              <p class="meta-tags">
+                <?php foreach ($project['tags'] as $i => $tag): ?>
+                  <span>
+                    <?= $tag ?> <?= $i !== array_key_last($project['tags']) ? '-' : '' ?>
+                  </span>
+                <?php endforeach; ?>
+              </p>
+
+              <p class="description">
+                <?= $project['description'] ?>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint omnis veniam, qui iusto rerum culpa illo nisi quam. Minima provident labore blanditiis quam.
+              </p>
+
+              <div class="links" role="group" aria-label="Links do projeto <?= $project['title'] ?>">
+                <?php if (!empty($project['demo_url'])): ?>
+                  <a
+                    class="btn-outline"
+                    href="<?= $project['demo_url'] ?>"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Projeto
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                <?php endif; ?>
+
+                <?php if (!empty($project['github_url'])): ?>
+                  <a
+                    class="btn-fill"
+                    href="<?= $project['github_url'] ?>"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Código
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                <?php endif; ?>
+
+                <?php if (!empty($project['packagist_url'])): ?>
+                  <a
+                    class="btn-outline"
+                    href="<?= $project['packagist_url'] ?>"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Packagist
+                    <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                  </a>
+                <?php endif; ?>
+              </div>
+            </div>
+          </li>
+        <?php endforeach; ?>
       </ul>
     </section>
 
     <section id="projects" class="projects-section" aria-labelledby="projects-title">
       <div class="title-section">
-        <h2 id="projects-title" class="title">Outros Projetos</h2>
+        <h2 id="projects-title" class="title">Mais Projetos</h2>
       </div>
 
       <ul class="projects-list" role="list">
-
-        <li class="card">
-          <div class="media">
-            <img
-              src=""
-              alt="Imagem do projeto"
-              loading="lazy" />
-          </div>
-
-          <div class="content">
-            <div class="links" role="group" aria-label="Links do Card">
-              <a
-                class="tooltip"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver Prévia">
-                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                <span class="tooltip-text bottom" aria-hidden="true">Ver Prévia</span>
-              </a>
-
-              <a
-                class="tooltip"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver código no GitHub">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-                <span class="tooltip-text bottom" aria-hidden="true">Ver Código</span>
-              </a>
-
-              <a
-                class="tooltip"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver projeto no Packagist">
-                <i class="fa-solid fa-box-open" aria-hidden="true"></i>
-                <span class="tooltip-text bottom" aria-hidden="true">Ver Packagist</span>
-              </a>
+        <?php foreach (array_slice($projects, 3) as $project): ?>
+          <li class="card">
+            <div class="media">
+              <img
+                src="<?= $project['image'] ?>"
+                alt="Imagem do projeto <?= $project['title'] ?>"
+                loading="lazy" />
             </div>
 
-            <h3 class="title">Título do Card</h3>
+            <div class="content">
+              <div class="links" role="group" aria-label="Links do Card">
+                <?php if (!empty($project['demo_url'])): ?>
+                  <a
+                    class="tooltip"
+                    href="<?= $project['demo_url'] ?>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver Prévia">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span class="tooltip-text bottom" aria-hidden="true">Ver Prévia</span>
+                  </a>
+                <?php endif; ?>
 
-            <p class="meta-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </p>
+                <?php if (!empty($project['github_url'])): ?>
+                  <a
+                    class="tooltip"
+                    href="<?= $project['github_url'] ?>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver código no GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span class="tooltip-text bottom" aria-hidden="true">Ver Código</span>
+                  </a>
+                <?php endif; ?>
 
-            <p class="excerpt">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit temporibus facilis ullam laudantium consequatur porro!
-            </p>
-          </div>
-        </li>
+                <?php if (!empty($project['packagist_url'])): ?>
+                  <a
+                    class="tooltip"
+                    href="<?= $project['packagist_url'] ?>"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver projeto no Packagist">
+                    <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                    <span class="tooltip-text bottom" aria-hidden="true">Ver Packagist</span>
+                  </a>
+                <?php endif; ?>
+              </div>
+
+              <h3 class="title"><?= $project['title'] ?></h3>
+
+              <p class="meta-tags">
+                <?php foreach ($project['tags'] as $i => $tag): ?>
+                  <span>
+                    <?= $tag ?> <?= $i !== array_key_last($project['tags']) ? '-' : '' ?>
+                  </span>
+                <?php endforeach; ?>
+              </p>
+
+              <p class="excerpt"><?= $project['excerpt'] ?></p>
+            </div>
+          </li>
+        <?php endforeach; ?>
       </ul>
     </section>
 
@@ -324,6 +345,13 @@
         method="POST"
         novalidate
         aria-label="Formulário de contato">
+        <div
+          class="form-feedback"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true">
+        </div>
+
         <div class="form-group">
           <label for="name" class="group-label">Nome</label>
           <input
@@ -376,13 +404,6 @@
         <p class="contact-alternative">
           ou entre em contato através do email <a href="mailto:<?= linkTo('email') ?>"><?= linkTo('email') ?></a>
         </p>
-
-        <div
-          class="form-feedback"
-          role="status"
-          aria-live="polite"
-          aria-atomic="true">
-        </div>
       </form>
     </section>
   </main>
