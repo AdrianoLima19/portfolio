@@ -430,7 +430,7 @@
             </li>
             <li>
               <a
-                class="tooltip grow"
+                class="tooltip"
                 href="<?= linkTo('whatsapp') ?>"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -441,7 +441,7 @@
             </li>
             <li>
               <a
-                class="tooltip grow"
+                class="tooltip"
                 href="<?= linkTo('linkedin') ?>"
                 target="_blank"
                 rel="noopener noreferrer"
