@@ -24,3 +24,29 @@
     @warn "Breakpoint `#{$breakpoint}` não encontrado.";
   }
 }
+
+@mixin tooltip-position($position) {
+  $breakpoints: sm, md, lg, xl;
+
+  &.#{$position} {
+    @content;
+  }
+
+  &.flip-#{$position} {
+    @content;
+  }
+
+  @each $breakpoint in $breakpoints {
+    &.#{$breakpoint}\:#{$position} {
+      @include from($breakpoint) {
+        @content;
+      }
+    }
+
+    &.#{$breakpoint}\:flip-#{$position} {
+      @include from($breakpoint) {
+        @content;
+      }
+    }
+  }
+}
